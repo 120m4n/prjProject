@@ -1,0 +1,39 @@
+
+<div class="container bg-primary bg-opacity-50 ">
+    <h1>Yo soy el padre {{miNombre}}</h1>
+    <app-hijo  
+        [propiedades]="propiedadesHardcode"></app-hijo>
+    <app-hijo 
+            [propiedades]="{
+            nombre_padre : 'Jesus',
+            enable_change_title : true
+            }"
+            (changeName)="cambiarNombre($event)">
+    </app-hijo>
+    <app-hijo 
+        [propiedades]="{
+        nombre_padre : 'Alberto',
+        enable_change_title : true,
+        enable_change_header : true
+        }"
+        (changeName)="cambiarNombre($event)">
+    </app-hijo>
+
+    <app-hijo 
+        [propiedades]="{
+        nombre_padre : 'Maria',
+        enable_change_title : true
+        }"
+        (changeName)="cambiarNombre($event)">
+    </app-hijo>
+    <app-hijo 
+        [propiedades]="{
+        nombre_padre : 'Gabriel',
+        enable_change_header : true
+        }">
+    </app-hijo>
+
+    <button class="col-3 mt-3 mb-3 btn btn-success" (click)="emiteCambioTitulo()">Cambia Header</button>
+
+</div>
+

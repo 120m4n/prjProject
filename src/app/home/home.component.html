@@ -1,0 +1,38 @@
+<br>
+<p>Prueba de componentes primeng</p>
+<br>
+
+<span class="p-float-label">
+    <input id="in_title" type="text" [(ngModel)]="title" pInputText />
+    <label for="in_title">Name</label>
+</span>
+<button type="button" pButton label="PrimeNG" (click)="upper()"></button>
+{{title}}
+<br>
+<br>
+<div class="p-fluid grid mt-2">
+
+    <div class="field col-6 md:col-4">
+        <span class="p-float-label">
+            <input type="text" id="inputtext" name="tonijas" pInputText [(ngModel)]="value1">
+            <label for="inputtext">InputText</label>
+        </span>
+    </div>
+    <div class="field col-6 md:col-4">
+        <span class="p-float-label">
+            <p-calendar inputId="calendar" [(ngModel)]="value3"></p-calendar>
+            <label for="calendar">Calendar</label>
+        </span>
+    </div>
+    <div class="field col-6 md:col-4">
+        <span class="p-float-label">
+            <p-calendar inputId="calendar2" [(ngModel)]="value4"></p-calendar>
+            <label for="calendar2">Calendar</label>
+        </span>
+    </div>
+
+    <div class="field col-6 md:col-4">
+        {{value1 | json}}
+    </div>
+
+</div>
